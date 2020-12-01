@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="596dp"
+        android:layout_height="966dp"
+        android:tint="#A1070000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/whereTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="244dp"
+        android:gravity="center"
+        android:text="W H E R E  T H E  B A L L \nW I L L  G O ?"
+        android:textColor="#FDFDFD"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+    android:id="@+id/rightButton"
+    android:layout_width="140dp"
+    android:layout_height="60dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="28dp"
+    android:layout_marginRight="28dp"
+    android:text="R I G H T "
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/whereTextView"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<Button
+    android:id="@+id/leftButton"
+    android:layout_width="140dp"
+    android:layout_height="60dp"
+    android:layout_marginStart="36dp"
+    android:layout_marginLeft="36dp"
+    android:layout_marginTop="8dp"
+    android:text="L E F T"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/whereTextView"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/collectedBallsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="28dp"
+        android:text="S C O R E : "
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftButton" />
+
+    <TextView
+    android:id="@+id/youLostTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:text="G A M E  O V E R !"
+    android:textColor="#F80303"
+    android:textSize="36sp"
+    android:textStyle="bold"
+    android:visibility="invisible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/newRecordTextView" />
+
+<TextView
+    android:id="@+id/newRecordTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="N E W  R E C O R D  : 1"
+    android:textColor="#FFEB3B"
+    android:textSize="22sp"
+    android:visibility="invisible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/collectedBallsTextView"
+    app:layout_constraintVertical_bias="0.0" />
+
+<TextView
+    android:id="@+id/collectedTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="0"
+    android:textColor="#FFFEFE"
+    android:textSize="26sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/newRecordTextView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.129"
+    app:layout_constraintStart_toEndOf="@+id/collectedBallsTextView"
+    app:layout_constraintTop_toBottomOf="@+id/rightButton"
+    app:layout_constraintVertical_bias="0.58" />
+
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:gravity="center"-->
+
+
+
+    <ImageView
+        android:id="@+id/firstImgMove"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginLeft="66dp"
+        android:src="@drawable/ball"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/secondImgMove"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:src="@drawable/ball"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/firstHoop"
+        android:layout_width="146dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/basketball_hoop" />
+
+    <ImageView
+        android:id="@+id/secondHoop"
+        android:layout_width="147dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/basketball_hoop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
